@@ -1,0 +1,27 @@
+{
+  "name": "totorox",
+  "version": "0.0.1",
+  "description": "totoro 扩展",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/leoner/totorox.git"
+  },
+  "keywords": [
+    "totoro",
+    "test"
+  ],
+  "author": "kangpangpang@gmail.com",
+  "dependencies": {
+    "totoro": "0.4.x",
+    "shelljs": "0.2.6"
+
+  },
+  "bin": {
+    "totorox": "./bin/totorox"
+  },
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/leoner/totorox/issues"
+  }
+}

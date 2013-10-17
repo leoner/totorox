@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+var fs = require('fs')
+var path = require('path')
+var totorox = require('../')
+
+function parseOptions(codes) {
+    if (!codes || !/^code=/.test(codes)) {
+        console.info('usage: totorox code="type document.getElementsByClassName"')
+        console.info('usage: totorox code="a.js"')
+        process.exit(0)
+    }
+
+    return codes.slice(5)
+}
+
+totorox.run(parseOptions(process.argv.slice(2)[0]))
