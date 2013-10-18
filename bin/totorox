@@ -5,13 +5,17 @@ var path = require('path')
 var totorox = require('../')
 
 function parseOptions(codes) {
-    if (!codes || !/^code=/.test(codes)) {
+    if (/^code=/.test(codes)) {
+        codes = codes.slice(5)
+    }
+
+    if (!codes) {
         console.info('usage: totorox code="typeof document.getElementsByClassName"')
         console.info('usage: totorox code="a.js"')
         process.exit(0)
     }
 
-    return codes.slice(5)
+    return codes
 }
 
 totorox.run(parseOptions(process.argv.slice(2)[0]))
