@@ -34,7 +34,6 @@ console.log(typeof 'abc')
 
 ```
   chrome 29.0.1547.65 / macosx 10.9.0
-    Passed all of 0 tests in 0ms
         > 'number'
         > 'string'
 ```
