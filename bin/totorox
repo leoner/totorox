@@ -6,7 +6,7 @@ var totorox = require('../')
 
 function parseOptions(codes) {
     if (!codes || !/^code=/.test(codes)) {
-        console.info('usage: totorox code="type document.getElementsByClassName"')
+        console.info('usage: totorox code="typeof document.getElementsByClassName"')
         console.info('usage: totorox code="a.js"')
         process.exit(0)
     }

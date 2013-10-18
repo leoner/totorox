@@ -14,6 +14,7 @@
   "author": "kangpangpang@gmail.com",
   "dependencies": {
     "totoro": "0.4.x",
+    "colorful": "*",
     "shelljs": "0.2.6"
 
   },

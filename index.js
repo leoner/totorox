@@ -2,7 +2,7 @@ var fs = require('fs')
 var path = require('path')
 
 var TotoroClient = require('totoro')
-var TotoroReport = require('totoro/lib/report')
+var TotoroReport = require('./lib/report')
 
 require('shelljs/global')
 
@@ -36,6 +36,13 @@ exports.run = function(codes) {
 }
 
 function runTotoro() {
+    var write = process.stdout.write
+
+    /**
+    process.stdout.write = function() {
+        write.apply(process.stdout, [].slice(arguments, 0))
+    }
+    **/
     new TotoroClient({
       runner: path.join(tempTestDir, 'runner.html'),
       report: function() {
