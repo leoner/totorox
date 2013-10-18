@@ -15,6 +15,12 @@ function parseOptions(codes) {
         process.exit(0)
     }
 
+    if (/^(window|document)$/.test(codes)) {
+        console.info('The use of illegal.')
+        console.info('usage: totorox code="document.getElementsByClassName"')
+        process.exit(0)
+    }
+
     return codes
 }
 
