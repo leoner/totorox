@@ -16,6 +16,10 @@ npm install totorox -g
 ```
 totorox code="typeof document.getElementsByClassName"
 totorox code="a.js"
+
+totorox 'typeof 1'
+totorox a.js
+
 ```
 
 假如a.js 是以下内容:
