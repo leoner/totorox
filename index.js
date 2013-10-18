@@ -45,6 +45,7 @@ function runTotoro() {
     **/
     new TotoroClient({
       runner: path.join(tempTestDir, 'runner.html'),
+      repo: 'totorox',
       report: function() {
         TotoroReport.apply(null, arguments)
       }
