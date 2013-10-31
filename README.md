@@ -21,6 +21,8 @@ totorox a.js
 
 ```
 
+> 注意在 windows 下面一定要用 **"** 双引号，如果用单引号windows 将会把银行中间部分作为一个整体。
+
 假如a.js 是以下内容:
 
 
@@ -37,7 +39,6 @@ console.log(typeof 'abc')
         > 'string'
 ```
 
-> 注意在 windows 下面一定要用 **"** 双引号，如果用单引号windows 将会把银行中间部分作为一个整体。
 
 ### totoro 参数支持
 ```
