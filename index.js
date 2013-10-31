@@ -13,7 +13,7 @@ var tempTestDir = path.join(tempDir, 'tests')
 mkdir('-p', tempTestDir)
 
 // console.info('create temp test dir:', tempTestDir)
-exports.run = function(codes) {
+exports.run = function(codes, opts) {
     var scripts = []
 
     codes.split(',').forEach(function(code) {
@@ -32,22 +32,20 @@ exports.run = function(codes) {
 
     fs.writeFileSync(path.join(tempTestDir, 'runner.html'), runner)
 
-    runTotoro()
+    runTotoro(opts)
 }
 
-function runTotoro() {
-    var write = process.stdout.write
-
+function runTotoro(opts) {
+    opts.runner = path.join(tempTestDir, 'runner.html')
+    opts.repo = 'totorox'
+    opts.report = function() {
+        TotoroReport.apply(null, arguments)
+    }
     /**
+    var write = process.stdout.write
     process.stdout.write = function() {
         write.apply(process.stdout, [].slice(arguments, 0))
     }
     **/
-    new TotoroClient({
-      runner: path.join(tempTestDir, 'runner.html'),
-      repo: 'totorox',
-      report: function() {
-        TotoroReport.apply(null, arguments)
-      }
-    })
+    new TotoroClient(opts)
 }

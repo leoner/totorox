@@ -38,4 +38,9 @@ console.log(typeof 'abc')
         > 'string'
 ```
 
+### totoro 参数支持
+```
+totorox 'typeof 1' --browsers=chrome,firefox
+totorox 'typeof 2' --timeout=0.5
+```
 
