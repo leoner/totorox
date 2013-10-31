@@ -24,7 +24,7 @@ function parseOptions(codes) {
     return codes
 }
 
-var totoroOptReg = /^\-\-(browsers|timeout|verbose)=?(.*)/
+var totoroOptReg = /^\-\-?(browsers|timeout|verbose|version|v)=?(.*)/
 function parseArgs() {
     var args = {}
     process.argv.slice(2).forEach(function(arg) {
@@ -32,7 +32,6 @@ function parseArgs() {
             var matcher = arg.match(totoroOptReg)
             var key = matcher[1]
             var value = matcher[2]
-            
             if (key === 'browsers' && value) {
                 args[key] = value.split(',')
             } else {

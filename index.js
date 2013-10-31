@@ -36,6 +36,14 @@ exports.run = function(codes, opts) {
 }
 
 function runTotoro(opts) {
+    if (opts.v || opts.version) {
+        var mainConfig = require('./package.json')
+        var totoroConfig = require('./node_modules/totoro/package.json')
+
+        console.info('totorox vesion: ' + mainConfig.version)
+        console.info('totoro vesion: ' + totoroConfig.version)
+        return
+    }
     opts.runner = path.join(tempTestDir, 'runner.html')
     opts.repo = 'totorox'
     opts.report = function() {
