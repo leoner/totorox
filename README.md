@@ -1,4 +1,3 @@
-
 # totorox 基于 totoro 的功能扩展
 主要是基于 totoro 来实现一些实用的功能, 好的功能后续也会直接集成到 totoro 中
 
@@ -17,10 +16,12 @@ npm install totorox -g
 totorox code="typeof document.getElementsByClassName"
 totorox code="a.js"
 
-totorox 'typeof 1'
+totorox "typeof 1"
 totorox a.js
 
 ```
+
+> 注意在 windows 下面一定要用 **"** 双引号，如果用单引号windows 将会把银行中间部分作为一个整体。
 
 假如a.js 是以下内容:
 
@@ -37,6 +38,7 @@ console.log(typeof 'abc')
         > 'number'
         > 'string'
 ```
+
 
 ### totoro 参数支持
 ```
