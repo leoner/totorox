@@ -1,6 +1,6 @@
 {
   "name": "totorox",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "totoro 扩展",
   "main": "index.js",
   "repository": {
@@ -13,9 +13,9 @@
   ],
   "author": "kangpangpang@gmail.com",
   "dependencies": {
-    "totoro": "0.5.x",
+    "totoro": "~1.0.1",
     "colorful": "*",
-    "shelljs": "0.2.6"
+    "shelljs": "0.3.0"
 
   },
   "bin": {
